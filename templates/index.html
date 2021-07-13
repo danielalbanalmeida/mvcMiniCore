@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}INDEX{% endblock titulo %}</title>
+</head>
+
+<body>
+    {% block cuerpo %}
+    <form action="" method="post" autocomplete="on">
+        {% csrf_token %}
+        <p>Fecha inicio: {{form.fechaInicio}}</p>
+        <p>Fecha fin: {{form.fechaFin}}</p>
+        <button type="submit">Enter</button>
+    </form>
+    <h2>BONOS CUARENTENA</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Departamento</th>
+                <th>Bono</th>
+            </tr>
+        </thead>
+        {% for u in users %}
+        <tbody>
+            <tr>
+                <td>{{ u }}</td>
+                <td>{{ u.departamento }}</td>
+                <td>{{ u.departamento.bono }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <h3>Total bonos: {{total}}</h3>
+    {% endblock cuerpo %}
+</body>
+</html>
