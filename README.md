@@ -17,3 +17,7 @@ For example here we have a simplified step-by-step process of how Django handles
 - The matched view function is executed. It may interact with the Model to retrieve or update data and render a Template to generate an HTML response.
 - The HTML response is sent back to the client's web browser, displaying the dynamically generated web page.
 - If there is any interaction with the user, such as form submissions or links, the process repeats as the user sends new request to different URLs.
+
+Deployed on Render
+https://github.com/danielalbanalmeida/mvcMiniCore/assets/55764851/27708219-e517-451f-97bd-2095009a9ccc
+
